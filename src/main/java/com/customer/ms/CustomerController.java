@@ -14,16 +14,22 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.customer.ms.DAO.CustomerDAO;
 import com.customer.ms.model.Customer;
+<<<<<<< HEAD
 import com.customer.ms.model.CustomerM;
 import com.customer.ms.service.CustomerService;
+=======
+>>>>>>> 6917c3f16ce5ef479f2bb6e74cef43a099bd28c0
 
 @RestController
 public class CustomerController {
 	
 	@Autowired
 	private CustomerDAO customerDAO;
+<<<<<<< HEAD
 	@Autowired
 	private CustomerService customerService;
+=======
+>>>>>>> 6917c3f16ce5ef479f2bb6e74cef43a099bd28c0
 	
 	@RequestMapping("/hello")
 	public String hello() {
@@ -56,6 +62,7 @@ public class CustomerController {
 	public Customer delCustomer(@RequestBody Customer customer) {
 		return customerDAO.delCustomer(customer);
 	}
+<<<<<<< HEAD
 	
 	@RequestMapping(value="/mongoCustomers",method = RequestMethod.GET,produces = (MediaType.APPLICATION_PROBLEM_JSON_VALUE))
 	public List<CustomerM> getMongoCustomers(){
@@ -88,4 +95,6 @@ public class CustomerController {
 		return customerService.updCustomer(customer);
 		}
 
+=======
+>>>>>>> 6917c3f16ce5ef479f2bb6e74cef43a099bd28c0
 }
